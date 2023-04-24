@@ -1,7 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio/ui/colors/app_colors.dart';
 import 'package:portfolio/ui/fonts/app_fonts.dart';
 
 class HomeSection extends StatelessWidget {
@@ -9,13 +7,13 @@ class HomeSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 900,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
-            padding: EdgeInsets.only(left: 100),
+            padding: const EdgeInsets.only(left: 100),
             width: MediaQuery.of(context).size.width * .6,
             height: MediaQuery.of(context).size.height * 1,
             child: Column(
