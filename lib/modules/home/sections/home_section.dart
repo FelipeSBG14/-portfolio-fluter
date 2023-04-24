@@ -1,3 +1,4 @@
+import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio/ui/colors/app_colors.dart';
@@ -29,12 +30,20 @@ class HomeSection extends StatelessWidget {
                 ),
                 Align(
                   alignment: Alignment.centerLeft,
-                  child: Text(
-                    'Desenvolvedor Flutter',
+                  child: DefaultTextStyle(
                     style: AppFonts.titleFunction(
                       MediaQuery.of(context).size.height * 0.04,
                     ),
                     textAlign: TextAlign.start,
+                    child: AnimatedTextKit(
+                      repeatForever: true,
+                      pause: const Duration(milliseconds: 2000),
+                      animatedTexts: [
+                        TypewriterAnimatedText('Desenvolvedor Flutter'),
+                        TypewriterAnimatedText('Estudante'),
+                        TypewriterAnimatedText('Entusiasta'),
+                      ],
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -43,7 +52,7 @@ class HomeSection extends StatelessWidget {
                 SizedBox(
                   width: MediaQuery.of(context).size.width * 0.5,
                   child: Text(
-                    '''Sempre buscando me desenvolver no desenvolvimento de aplicações móveis, meu interesse na programação mobile existe desde o ensino médio. Estou sempre buscando me atualizar e melhorar minhas habilidades como completo, sou participativo e comunicativo e sempre empenhado em melhorar''',
+                    '''Eu sou um desenvolvedor de aplicações móveis apaixonado e dedicado, e busco constantemente aprimorar minhas habilidades. Meu interesse em programação mobile surgiu no ensino médio e desde então venho me dedicando a aprofundar meu conhecimento na área.''',
                     style: AppFonts.resumeText(
                         MediaQuery.of(context).size.height * 0.020),
                   ),
