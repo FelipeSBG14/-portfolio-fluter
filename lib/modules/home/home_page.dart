@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/modules/home/sections/home_section.dart';
 import 'package:portfolio/modules/home/widgets/menu_bar.dart';
 import 'package:portfolio/modules/home/widgets/section_menu.dart';
+import 'package:portfolio/ui/colors/app_colors.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 3, 31, 72),
+      backgroundColor: AppColors.primaryColor,
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(100),
         child: Padding(

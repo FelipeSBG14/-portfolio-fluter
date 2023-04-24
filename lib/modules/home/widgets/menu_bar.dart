@@ -32,13 +32,36 @@ class MenuBar extends AppBar {
                     onPressed: () => onMenuClick(1),
                     text: 'Home',
                   ),
+                  const SizedBox(
+                    width: 30,
+                  ),
                   SectionButton(
                     onPressed: () => onMenuClick(2),
-                    text: 'Seção 2',
+                    text: 'Sobre',
+                  ),
+                  const SizedBox(
+                    width: 30,
                   ),
                   SectionButton(
                     onPressed: () => onMenuClick(3),
-                    text: 'Seção 3',
+                    text: 'Projetos',
+                  ),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  SectionButton(
+                    onPressed: () => onMenuClick(3),
+                    text: 'Experiências',
+                  ),
+                  const SizedBox(
+                    width: 30,
+                  ),
+                  SectionButton(
+                    onPressed: () => onMenuClick(3),
+                    text: 'Contato',
+                  ),
+                  const SizedBox(
+                    width: 30,
                   ),
                 ],
               ),

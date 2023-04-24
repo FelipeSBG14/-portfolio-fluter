@@ -45,7 +45,7 @@ class HomeSection extends StatelessWidget {
                   child: Text(
                     '''Sempre buscando me desenvolver no desenvolvimento de aplicações móveis, meu interesse na programação mobile existe desde o ensino médio. Estou sempre buscando me atualizar e melhorar minhas habilidades como completo, sou participativo e comunicativo e sempre empenhado em melhorar''',
                     style: AppFonts.resumeText(
-                        MediaQuery.of(context).size.height * 0.018),
+                        MediaQuery.of(context).size.height * 0.020),
                   ),
                 ),
                 const SizedBox(
@@ -66,7 +66,9 @@ class HomeSection extends StatelessWidget {
               ],
             ),
           ),
-          Image.asset('assets/profile_image.png'),
+          Align(
+              alignment: Alignment.bottomCenter,
+              child: Image.asset('assets/profile_image2.png')),
         ],
       ),
     );

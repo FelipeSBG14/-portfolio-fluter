@@ -24,7 +24,6 @@ class AppFonts {
     return GoogleFonts.poppins(
       fontSize: size,
       fontWeight: FontWeight.w500,
-      color: Colors.white,
     );
   }
 

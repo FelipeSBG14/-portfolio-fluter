@@ -8,8 +8,6 @@ class PortfolioUiConfig {
   static ThemeData get theme => ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
         fontFamily: GoogleFonts.poppins().fontFamily,
-        primaryColor: Color.fromARGB(255, 2, 19, 44),
-        backgroundColor: const Color.fromARGB(255, 3, 31, 72),
         primaryColorLight: const Color.fromARGB(255, 79, 150, 208),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
