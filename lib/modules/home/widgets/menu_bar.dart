@@ -23,7 +23,7 @@ class MenuBar extends AppBar {
           ),
           actions: [
             Padding(
-              padding: EdgeInsets.only(right: 100),
+              padding: const EdgeInsets.only(right: 100),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.center,

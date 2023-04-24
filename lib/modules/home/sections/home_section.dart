@@ -1,14 +1,23 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+import 'package:portfolio/modules/home/widgets/social_button.dart';
 import 'package:portfolio/ui/fonts/app_fonts.dart';
 
-class HomeSection extends StatelessWidget {
+class HomeSection extends StatefulWidget {
   const HomeSection({Key? key}) : super(key: key);
 
   @override
+  State<HomeSection> createState() => _HomeSectionState();
+}
+
+bool isHover = false;
+
+class _HomeSectionState extends State<HomeSection> {
+  @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 900,
+      height: MediaQuery.of(context).size.height * 0.9,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -20,6 +29,9 @@ class HomeSection extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                const SizedBox(
+                  height: 200,
+                ),
                 Text(
                   'Prazer, eu sou Felipe Sanches',
                   style: AppFonts.titleName(
@@ -69,13 +81,55 @@ class HomeSection extends StatelessWidget {
                       ),
                     ),
                   ),
+                ),
+                const SizedBox(
+                  height: 150,
+                ),
+                Align(
+                  alignment: AlignmentDirectional.bottomStart,
+                  child: Row(
+                    children: const [
+                      SocialButton(
+                          icon: Entypo.linkedin,
+                          url: 'https://www.linkedin.com/in/felipesbg/'),
+                      SocialButton(
+                        icon: Entypo.github,
+                        url: 'https://github.com/FelipeSBG14',
+                      ),
+                      SocialButton(
+                        icon: Entypo.instagram,
+                        url: 'https://www.instagram.com/felipesbg.apk/',
+                      ),
+                    ],
+                  ),
                 )
               ],
             ),
           ),
-          Align(
+          InkWell(
+            onTap: () => {},
+            enableFeedback: false,
+            excludeFromSemantics: true,
+            focusColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            mouseCursor: MouseCursor.uncontrolled,
+            onHover: (value) => setState(() {
+              isHover = value;
+            }),
+            child: Align(
               alignment: Alignment.bottomCenter,
-              child: Image.asset('assets/profile_image2.png')),
+              child: AnimatedOpacity(
+                opacity: isHover ? 0.3 : 1,
+                duration: const Duration(milliseconds: 1000),
+                child: Image.asset(
+                  'assets/profile_image2.png',
+                  opacity: const AlwaysStoppedAnimation(.8),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

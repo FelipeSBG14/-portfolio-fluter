@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/modules/home/sections/about_section.dart';
 import 'package:portfolio/modules/home/sections/home_section.dart';
 import 'package:portfolio/modules/home/widgets/menu_bar.dart';
 import 'package:portfolio/modules/home/widgets/section_menu.dart';
@@ -12,10 +13,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final _pageController = PageController();
   final scrollController = ScrollController();
   final keyHome = GlobalKey();
-  final keySecao2 = GlobalKey();
+  final keyAbout = GlobalKey();
   final keySecao3 = GlobalKey();
 
   @override
@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: AppColors.primaryColor,
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100),
+        preferredSize: const Size.fromHeight(100),
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: MenuBar(
@@ -44,10 +44,8 @@ class _HomePageState extends State<HomePage> {
             HomeSection(
               key: keyHome,
             ),
-            SectionMenu(
-              key: keySecao2,
-              color: Colors.blue,
-              height: 2000,
+            AboutSection(
+              key: keyAbout,
             ),
             SectionMenu(
               key: keySecao3,
@@ -68,7 +66,7 @@ class _HomePageState extends State<HomePage> {
         renderBox = keyHome.currentContext!.findRenderObject() as RenderBox;
         break;
       case 2:
-        renderBox = keySecao2.currentContext!.findRenderObject() as RenderBox;
+        renderBox = keyAbout.currentContext!.findRenderObject() as RenderBox;
         break;
       case 3:
         renderBox = keySecao3.currentContext!.findRenderObject() as RenderBox;

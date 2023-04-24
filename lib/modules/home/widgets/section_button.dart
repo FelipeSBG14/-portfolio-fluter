@@ -19,10 +19,18 @@ class SectionButton extends StatelessWidget {
       onPressed: onPressed,
       style: ButtonStyle(
         foregroundColor: MaterialStateProperty.resolveWith<Color>(
-            (Set<MaterialState> states) {
-          if (states.contains(MaterialState.hovered)) return AppColors.secColor;
-          return Colors.white;
-        }),
+          (Set<MaterialState> states) {
+            if (states.contains(MaterialState.hovered)) {
+              return AppColors.secColor;
+            }
+            return Colors.white;
+          },
+        ),
+        overlayColor: MaterialStateProperty.resolveWith<Color>(
+          (Set<MaterialState> states) {
+            return Colors.transparent;
+          },
+        ),
       ),
       child: Text(text,
           style:
