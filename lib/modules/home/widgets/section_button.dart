@@ -32,9 +32,12 @@ class SectionButton extends StatelessWidget {
           },
         ),
       ),
-      child: Text(text,
-          style:
-              AppFonts.textButton(MediaQuery.of(context).size.height * 0.023)),
+      child: Text(
+        text,
+        style: AppFonts.textButton(
+          MediaQuery.of(context).size.height * 0.023,
+        ),
+      ),
     );
   }
 }

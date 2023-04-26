@@ -42,4 +42,12 @@ class AppFonts {
       color: AppColors.primaryColor,
     );
   }
+
+  static aboutText(size, color) {
+    return GoogleFonts.poppins(
+      fontSize: size,
+      fontWeight: FontWeight.w700,
+      color: color,
+    );
+  }
 }
