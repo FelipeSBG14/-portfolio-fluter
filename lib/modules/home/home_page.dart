@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/modules/home/sections/about_section.dart';
 import 'package:portfolio/modules/home/sections/home_section.dart';
+import 'package:portfolio/modules/home/sections/projects_section.dart';
 import 'package:portfolio/modules/home/widgets/menu_bar.dart';
 import 'package:portfolio/modules/home/widgets/section_menu.dart';
 import 'package:portfolio/ui/colors/app_colors.dart';
@@ -16,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   final scrollController = ScrollController();
   final keyHome = GlobalKey();
   final keyAbout = GlobalKey();
-  final keySecao3 = GlobalKey();
+  final keyProjects = GlobalKey();
 
   @override
   void dispose() {
@@ -47,10 +48,8 @@ class _HomePageState extends State<HomePage> {
             AboutSection(
               key: keyAbout,
             ),
-            SectionMenu(
-              key: keySecao3,
-              color: Colors.red,
-              height: 10,
+            ProjectsSection(
+              key: keyProjects,
             ),
           ],
         ),
@@ -69,7 +68,7 @@ class _HomePageState extends State<HomePage> {
         renderBox = keyAbout.currentContext!.findRenderObject() as RenderBox;
         break;
       case 3:
-        renderBox = keySecao3.currentContext!.findRenderObject() as RenderBox;
+        renderBox = keyProjects.currentContext!.findRenderObject() as RenderBox;
         break;
       default:
         throw Exception();
