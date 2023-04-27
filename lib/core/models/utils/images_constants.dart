@@ -43,5 +43,19 @@ class ImagesConstants {
       description: 'Esse site de portifolio que foi feito 100% em Flutter !',
       '',
     ),
+    const CarouselImage(
+      title: 'Contador de Pontos',
+      image: 'assets/projects/contador.jpg',
+      description:
+          'Contador de pontos que aceita infinitos jogadores e layout adaptativo',
+      'https://play.google.com/store/apps/details?id=com.felipeapk.score_counter',
+    ),
+    const CarouselImage(
+      title: 'App Sigo',
+      image: 'assets/projects/sigo.jpg',
+      description:
+          'Aplicativo para facilitar o acesso ao catálogo de produtos e calculadoras que automaztizam processos',
+      'https://play.google.com/store/apps/details?id=com.sigo.appsigo',
+    ),
   ];
 }

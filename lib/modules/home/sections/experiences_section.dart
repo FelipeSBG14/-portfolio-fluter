@@ -68,6 +68,26 @@ class ExperiencesSection extends StatelessWidget {
                           ),
                           endChild: const ExperienceTile(
                             date: '2018 - 2020',
+                            jobTittle: 'Ensino Fundamental - Colégio Status',
+                            jobDescription:
+                                'Desde o ensino fundamental já procurava saber mais sobre lógica de algoritmos e participei de algumas turmas de programação com a linguagem C',
+                          ),
+                        ),
+                        TimelineTile(
+                          alignment: TimelineAlign.center,
+                          isFirst: false,
+                          isLast: false,
+                          indicatorStyle: const IndicatorStyle(
+                            width: 20,
+                            color: AppColors.secColor,
+                            indicatorXY: 0.2,
+                            padding: EdgeInsets.all(8),
+                          ),
+                          beforeLineStyle: const LineStyle(
+                            color: AppColors.secColor,
+                          ),
+                          endChild: const ExperienceTile(
+                            date: '2018 - 2020',
                             jobTittle: 'Ensino Médio - Colégio Status',
                             jobDescription:
                                 'Aqui foi onde eu tive a oportunidade de ter meus primeiros contatos com programação e também participar do DESTACOM, onde eu desenvolvi o "English Speaker", minha primeira aplicação mobile',
