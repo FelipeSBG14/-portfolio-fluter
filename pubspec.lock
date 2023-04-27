@@ -97,6 +97,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_dotenv:
+    dependency: "direct main"
+    description:
+      name: flutter_dotenv
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.0.2"
   flutter_lints:
     dependency: "direct dev"
     description:
@@ -129,7 +136,7 @@ packages:
     source: hosted
     version: "4.0.3"
   http:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: http
       url: "https://pub.dartlang.org"
@@ -308,13 +315,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.4.12"
-  timeline_list:
-    dependency: "direct main"
-    description:
-      name: timeline_list
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.0.6"
   timeline_tile:
     dependency: "direct main"
     description:
@@ -322,6 +322,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0"
+  top_snackbar_flutter:
+    dependency: "direct main"
+    description:
+      name: top_snackbar_flutter
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.0.0+1"
   typed_data:
     dependency: transitive
     description:
@@ -385,6 +392,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.0.5"
+  validatorless:
+    dependency: "direct main"
+    description:
+      name: validatorless
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.2.3"
   vector_math:
     dependency: transitive
     description:
