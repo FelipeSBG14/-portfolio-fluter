@@ -18,7 +18,7 @@ class CarouselImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 700,
       width: 9000,
       child: Column(
@@ -31,7 +31,7 @@ class CarouselImage extends StatelessWidget {
           const SizedBox(
             height: 30,
           ),
-          Container(
+          SizedBox(
             height: 500,
             width: 900,
             child: Image.asset(
@@ -51,14 +51,20 @@ class CarouselImage extends StatelessWidget {
             height: 50,
           ),
           ElevatedButton(
-              onPressed: () {
-                if (url == "") {
-                  return;
-                } else {
-                  launchUrl(Uri.parse(url!));
-                }
-              },
-              child: Text('Saiba Mais'))
+            onPressed: () {
+              if (url == "") {
+                return;
+              } else {
+                launchUrl(Uri.parse(url!));
+              }
+            },
+            child: Text(
+              'Saiba Mais',
+              style: AppFonts.buttonText(
+                MediaQuery.of(context).size.height * 0.017,
+              ),
+            ),
+          )
         ],
       ),
     );

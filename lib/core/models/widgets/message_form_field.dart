@@ -25,6 +25,7 @@ class MessageFormField extends StatelessWidget {
         maxLines: 20,
         keyboardType: TextInputType.multiline,
         decoration: InputDecoration(
+          alignLabelWithHint: true,
           contentPadding:
               const EdgeInsets.symmetric(vertical: 25.0, horizontal: 10.0),
           label: Text(

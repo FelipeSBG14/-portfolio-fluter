@@ -1,11 +1,17 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
+
 import 'package:portfolio/modules/home/widgets/social_button.dart';
 import 'package:portfolio/ui/fonts/app_fonts.dart';
 
 class HomeSection extends StatefulWidget {
-  const HomeSection({Key? key}) : super(key: key);
+  final ValueChanged<int> onMenuClick;
+  const HomeSection({
+    Key? key,
+    required this.onMenuClick,
+  }) : super(key: key);
 
   @override
   State<HomeSection> createState() => _HomeSectionState();
@@ -73,7 +79,7 @@ class _HomeSectionState extends State<HomeSection> {
                 Align(
                   alignment: Alignment.bottomLeft,
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () => widget.onMenuClick(5),
                     child: Text(
                       'Entre em Contato',
                       style: AppFonts.buttonText(

@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_controller.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/core/models/utils/images_constants.dart';
@@ -39,12 +38,12 @@ class ProjectsSection extends StatelessWidget {
           const SizedBox(
             height: 20,
           ),
-          Container(
+          SizedBox(
             width: MediaQuery.of(context).size.width * 1,
             height: MediaQuery.of(context).size.height * 0.8,
             child: CarouselSlider(
               options: CarouselOptions(
-                autoPlayAnimationDuration: Duration(
+                autoPlayAnimationDuration: const Duration(
                   seconds: 2,
                 ),
                 autoPlay: true,

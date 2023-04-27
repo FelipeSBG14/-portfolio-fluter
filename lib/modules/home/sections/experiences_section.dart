@@ -14,118 +14,52 @@ class ExperiencesSection extends StatelessWidget {
       color: AppColors.backgroundAbout,
       width: MediaQuery.of(context).size.width * 1,
       height: MediaQuery.of(context).size.height * .9,
-      child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-        RichText(
-          text: TextSpan(
-            text: 'Minha',
-            style: AppFonts.aboutText(
-              MediaQuery.of(context).size.height * 0.05,
-              Colors.white,
-            ),
-            children: [
-              TextSpan(
-                text: ' Trajetória',
-                style: AppFonts.aboutText(
-                  MediaQuery.of(context).size.height * 0.05,
-                  AppColors.secColor,
-                ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          RichText(
+            text: TextSpan(
+              text: 'Minha',
+              style: AppFonts.aboutText(
+                MediaQuery.of(context).size.height * 0.05,
+                Colors.white,
               ),
-            ],
+              children: [
+                TextSpan(
+                  text: ' Trajetória',
+                  style: AppFonts.aboutText(
+                    MediaQuery.of(context).size.height * 0.05,
+                    AppColors.secColor,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        Container(
+          Container(
             height: 800,
-            margin: EdgeInsets.only(
-                right: MediaQuery.of(context).size.height * 0.35),
             width: MediaQuery.of(context).size.width * 1,
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Container(
+                  SizedBox(
                     height: 800,
                     width: 1000,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Text(
-                          'Educação',
-                          style: AppFonts.titleName(
-                              MediaQuery.of(context).size.height * 0.015),
-                        ),
-                        TimelineTile(
-                          alignment: TimelineAlign.center,
-                          isFirst: true,
-                          indicatorStyle: const IndicatorStyle(
-                            width: 20,
-                            color: AppColors.secColor,
-                            indicatorXY: 0.2,
-                            padding: EdgeInsets.all(8),
+                        Padding(
+                          padding: EdgeInsets.only(
+                            left: MediaQuery.of(context).size.width * 0.010,
                           ),
-                          beforeLineStyle: const LineStyle(
-                            color: AppColors.secColor,
+                          child: Text(
+                            'Educação    -    Experiências',
+                            style: AppFonts.titleName(
+                                MediaQuery.of(context).size.height * 0.015),
+                            textAlign: TextAlign.center,
                           ),
-                          endChild: const ExperienceTile(
-                            date: '2018 - 2020',
-                            jobTittle: 'Ensino Fundamental - Colégio Status',
-                            jobDescription:
-                                'Desde o ensino fundamental já procurava saber mais sobre lógica de algoritmos e participei de algumas turmas de programação com a linguagem C',
-                          ),
-                        ),
-                        TimelineTile(
-                          alignment: TimelineAlign.center,
-                          isFirst: false,
-                          isLast: false,
-                          indicatorStyle: const IndicatorStyle(
-                            width: 20,
-                            color: AppColors.secColor,
-                            indicatorXY: 0.2,
-                            padding: EdgeInsets.all(8),
-                          ),
-                          beforeLineStyle: const LineStyle(
-                            color: AppColors.secColor,
-                          ),
-                          endChild: const ExperienceTile(
-                            date: '2018 - 2020',
-                            jobTittle: 'Ensino Médio - Colégio Status',
-                            jobDescription:
-                                'Aqui foi onde eu tive a oportunidade de ter meus primeiros contatos com programação e também participar do DESTACOM, onde eu desenvolvi o "English Speaker", minha primeira aplicação mobile',
-                          ),
-                        ),
-                        TimelineTile(
-                          alignment: TimelineAlign.center,
-                          isFirst: false,
-                          isLast: true,
-                          indicatorStyle: const IndicatorStyle(
-                            width: 20,
-                            color: AppColors.secColor,
-                            indicatorXY: 0.2,
-                            padding: EdgeInsets.all(8),
-                          ),
-                          beforeLineStyle: const LineStyle(
-                            color: AppColors.secColor,
-                          ),
-                          endChild: const ExperienceTile(
-                            date: '2021 - 2023',
-                            jobTittle: 'Engenharia de Computação - UFMS',
-                            jobDescription:
-                                'Aqui é onde eu estou sendo diretor da empresa júnior e apendendo muito sobre computação de modo geral, para poder ser um profissional completo e competente',
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Container(
-                    height: 800,
-                    width: 1000,
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'Experiência',
-                          style: AppFonts.titleName(
-                              MediaQuery.of(context).size.height * 0.015),
                         ),
                         TimelineTile(
                           alignment: TimelineAlign.center,
@@ -144,6 +78,12 @@ class ExperiencesSection extends StatelessWidget {
                             jobTittle: 'Flutter Developer - Mega Jr',
                             jobDescription:
                                 'Na empresa júnior de computação da UFMS, a Mega Jr, foi onde eu aprendi a base do Flutter e me apaixonei pelo framework',
+                          ),
+                          startChild: const ExperienceTile(
+                            date: '2018 - 2020',
+                            jobTittle: 'Ensino Fundamental - Colégio Status',
+                            jobDescription:
+                                'Desde o ensino fundamental já procurava saber mais sobre lógica de algoritmos e participei de algumas turmas de programação com a linguagem C',
                           ),
                         ),
                         TimelineTile(
@@ -165,6 +105,12 @@ class ExperiencesSection extends StatelessWidget {
                             jobDescription:
                                 'Nessa empresa fui contratado para cuidar de um sistema web, feito em vue, foi onde eu tive meu primeiro contato real com desenvolvimento web',
                           ),
+                          startChild: const ExperienceTile(
+                            date: '2018 - 2020',
+                            jobTittle: 'Ensino Médio - Colégio Status',
+                            jobDescription:
+                                'Aqui foi onde eu tive a oportunidade de ter meus primeiros contatos com programação e também participar do DESTACOM, onde eu desenvolvi o "English Speaker", minha primeira aplicação mobile',
+                          ),
                         ),
                         TimelineTile(
                           alignment: TimelineAlign.center,
@@ -185,14 +131,22 @@ class ExperiencesSection extends StatelessWidget {
                             jobDescription:
                                 'Durante meu tempo como desenvolvedor web surgiram demandas de uma aplicação mobile, o "Road View", e foi ai que fui para o cargo de desenvolvedor Flutter',
                           ),
+                          startChild: const ExperienceTile(
+                            date: '2021 - 2023',
+                            jobTittle: 'Engenharia de Computação - UFMS',
+                            jobDescription:
+                                'Aqui é onde eu estou sendo diretor da empresa júnior e apendendo muito sobre computação de modo geral, para poder ser um profissional completo e competente',
+                          ),
                         ),
                       ],
                     ),
                   ),
                 ],
               ),
-            )),
-      ]),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

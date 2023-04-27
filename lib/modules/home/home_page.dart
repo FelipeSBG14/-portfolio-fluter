@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/modules/home/sections/about_section.dart';
 import 'package:portfolio/modules/home/sections/contact_section.dart';
+import 'package:portfolio/modules/home/sections/copy_right_section.dart';
 import 'package:portfolio/modules/home/sections/experiences_section.dart';
 import 'package:portfolio/modules/home/sections/home_section.dart';
 import 'package:portfolio/modules/home/sections/projects_section.dart';
 import 'package:portfolio/modules/home/widgets/menu_bar.dart';
-import 'package:portfolio/modules/home/widgets/section_menu.dart';
 import 'package:portfolio/ui/colors/app_colors.dart';
 
 class HomePage extends StatefulWidget {
@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
           children: [
             HomeSection(
               key: keyHome,
+              onMenuClick: _onMenuClick,
             ),
             AboutSection(
               key: keyAbout,
@@ -60,7 +61,8 @@ class _HomePageState extends State<HomePage> {
             ),
             ContactSection(
               key: keyContact,
-            )
+            ),
+            CopyRightSection()
           ],
         ),
       ),
