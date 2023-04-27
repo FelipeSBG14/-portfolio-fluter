@@ -20,6 +20,14 @@ class AppFonts {
     );
   }
 
+  static experienceDates(size) {
+    return GoogleFonts.poppins(
+      fontSize: size,
+      fontWeight: FontWeight.w400,
+      color: AppColors.secColor,
+    );
+  }
+
   static textButton(size) {
     return GoogleFonts.poppins(
       fontSize: size,

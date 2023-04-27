@@ -50,7 +50,7 @@ class MenuBar extends AppBar {
                     width: 30,
                   ),
                   SectionButton(
-                    onPressed: () => onMenuClick(3),
+                    onPressed: () => onMenuClick(4),
                     text: 'Experiências',
                   ),
                   const SizedBox(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/modules/home/sections/about_section.dart';
+import 'package:portfolio/modules/home/sections/experiences_section.dart';
 import 'package:portfolio/modules/home/sections/home_section.dart';
 import 'package:portfolio/modules/home/sections/projects_section.dart';
 import 'package:portfolio/modules/home/widgets/menu_bar.dart';
@@ -18,6 +19,7 @@ class _HomePageState extends State<HomePage> {
   final keyHome = GlobalKey();
   final keyAbout = GlobalKey();
   final keyProjects = GlobalKey();
+  final keyExperiences = GlobalKey();
 
   @override
   void dispose() {
@@ -51,6 +53,9 @@ class _HomePageState extends State<HomePage> {
             ProjectsSection(
               key: keyProjects,
             ),
+            ExperiencesSection(
+              key: keyExperiences,
+            )
           ],
         ),
       ),
@@ -69,6 +74,10 @@ class _HomePageState extends State<HomePage> {
         break;
       case 3:
         renderBox = keyProjects.currentContext!.findRenderObject() as RenderBox;
+        break;
+      case 4:
+        renderBox =
+            keyExperiences.currentContext!.findRenderObject() as RenderBox;
         break;
       default:
         throw Exception();

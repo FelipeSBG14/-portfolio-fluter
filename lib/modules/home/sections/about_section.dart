@@ -25,7 +25,7 @@ class _AboutSectionState extends State<AboutSection>
     return Container(
       color: AppColors.backgroundAbout,
       width: MediaQuery.of(context).size.width * 1,
-      height: MediaQuery.of(context).size.height * 0.9,
+      height: MediaQuery.of(context).size.height * .9,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -48,7 +48,7 @@ class _AboutSectionState extends State<AboutSection>
             ),
           ),
           const SizedBox(
-            height: 40,
+            height: 25,
           ),
           Stack(
             alignment: Alignment.center,
@@ -75,7 +75,7 @@ class _AboutSectionState extends State<AboutSection>
                   height: MediaQuery.of(context).size.height * 0.3,
                   child: Container(
                     decoration: BoxDecoration(
-                      image: DecorationImage(
+                      image: const DecorationImage(
                         image: AssetImage("assets/profile_image.png"),
                         fit: BoxFit.fitHeight,
                       ),
@@ -87,7 +87,7 @@ class _AboutSectionState extends State<AboutSection>
             ],
           ),
           const SizedBox(
-            height: 50,
+            height: 20,
           ),
           SizedBox(
             width: MediaQuery.of(context).size.width * 0.5,

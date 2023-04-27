@@ -17,7 +17,7 @@ class _HomeSectionState extends State<HomeSection> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.9,
+      height: MediaQuery.of(context).size.height * 0.91,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
