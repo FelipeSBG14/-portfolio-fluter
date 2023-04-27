@@ -54,6 +54,7 @@ class _ContactSectionState extends State<ContactSection> {
           },
         ),
       );
+      log(response.body);
     } on Error catch (e, s) {
       log('Erro ao enviar email', error: e, stackTrace: s);
       throw ErrorDescription('Erro ao enviar e-mail');
@@ -220,7 +221,7 @@ class _ContactSectionState extends State<ContactSection> {
                 validator: Validatorless.required('Coloque uma mensagem'),
               ),
             ),
-            Container(
+            SizedBox(
               height: MediaQuery.of(context).size.height * 0.080,
               width: MediaQuery.of(context).size.width * 0.080,
               child: ElevatedButton(
