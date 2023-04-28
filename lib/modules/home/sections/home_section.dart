@@ -225,7 +225,7 @@ class _HomeSectionState extends State<HomeSection> {
                   opacity: isHover ? 0.3 : 1,
                   duration: const Duration(milliseconds: 1000),
                   child: Image.asset(
-                    'assets/homepage.png',
+                    'assets/homepage.webp',
                     opacity: const AlwaysStoppedAnimation(.8),
                   ),
                 ),

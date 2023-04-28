@@ -69929,7 +69929,7 @@ f=A.pz(A.alc(A.a([A.z5(o),A.z5(n),A.z5(m)],d),B.cq,!0),q,q,B.at,!0,f,B.a0,q,B.V)
 d=a.A(j).f
 g=A.c_(q,A.ec(A.a([B.JA,e,new A.cV(B.lR,q,q,f,q),B.b5,A.bq(A.ce(l,q,q,q,A.aT(B.i,a.A(j).f.a.b*0.02,B.q,q),q,q,q),q,d.a.a*0.5),B.fe,new A.cV(B.lS,q,q,A.vj(A.ce(k,q,q,q,A.aT(B.aQ,a.A(j).f.a.b*0.03,B.bc,q),q,q,q),new A.abY(this),q),q),B.Jz,new A.cV(B.lP,q,q,A.el(B.nJ,B.C,B.aK,B.v),q)],r),B.ea,B.ah,B.v),B.o,q,q,q,s.a.b,q,B.BM,g.a.a*0.6)
 j=$.aq8?0.3:1
-return new A.lF(i,A.bq(A.el(A.a([g,A.aiw(!1,!0,new A.cV(B.lQ,q,q,A.alb(!1,A.ami("assets/homepage.png",q,B.xW),B.af,B.d3,j),q),q,!1,!0,B.E,q,B.E,B.E,B.yK,q,q,new A.abZ(this),q,new A.ac_(),q,B.E,q,q)],r),B.C,B.tP,B.v),h.a.b*0.91,q),q)}}
+return new A.lF(i,A.bq(A.el(A.a([g,A.aiw(!1,!0,new A.cV(B.lQ,q,q,A.alb(!1,A.ami("assets/homepage.webp",q,B.xW),B.af,B.d3,j),q),q,!1,!0,B.E,q,B.E,B.E,B.yK,q,q,new A.abZ(this),q,new A.ac_(),q,B.E,q,q)],r),B.C,B.tP,B.v),h.a.b*0.91,q),q)}}
 A.abX.prototype={
 $0(){return this.a.a.MP(5)},
 $S:0}
@@ -73295,7 +73295,7 @@ B.xm=new A.mD(2,"paused")
 B.xn=new A.mD(3,"detached")
 B.xo=new A.SU(!1,127)
 B.lU=new A.SV(127)
-B.cV=new A.p9("assets/profile_image.png",null,null)
+B.cV=new A.p9("assets/profile_image.webp",null,null)
 B.cB=A.a(s([]),t.s)
 B.j=new A.rk(1,"downstream")
 B.cR=new A.e3(-1,-1,B.j,!1,-1,-1)
@@ -73600,14 +73600,14 @@ B.yN=new A.PS()
 B.yO=new A.QR()
 B.yP=new A.Dt(1,"viewport")
 B.yQ=new A.uw(null,null,null,null,null,null,null)
-B.yR=new A.hz("Road View","assets/projects/road_view.jpg","Aplicativo para monitoramento de rodovias","",null)
-B.yS=new A.hz("Vakinha Burguer","assets/projects/vakinha_burguer.jpg","Aplicativo de delivery desenvolvido durante o DartWeek da Academia do Flutter","https://www.linkedin.com/posts/felipesbg_dartweek-flutterdevelopment-aprendizadocontinuo-activity-7028908740993032192-1L8Q?utm_source=share&utm_medium=member_desktop",null)
-B.yT=new A.hz("To Do List","assets/projects/todo_list.png","Aplicativo que marca afazeres a serem feitos e concluidos","",null)
-B.yU=new A.hz("Educapi","assets/projects/educapi.jpg","Aplicativo feito durante um edital da UFMS incentivando a sustentabilidade.","https://www.linkedin.com/posts/felipesbg_empresas-sustentabilidade-designers-activity-7019381738736861185-eoWz?utm_source=share&utm_medium=member_desktop",null)
-B.yV=new A.hz("App Sigo","assets/projects/sigo.jpg","Aplicativo para facilitar o acesso ao cat\xe1logo de produtos e calculadoras que automaztizam processos","https://play.google.com/store/apps/details?id=com.sigo.appsigo",null)
-B.yW=new A.hz("Contador de Pontos","assets/projects/contador.jpg","Contador de pontos que aceita infinitos jogadores e layout adaptativo","https://play.google.com/store/apps/details?id=com.felipeapk.score_counter",null)
-B.yX=new A.hz("English Speaker","assets/projects/english_speaker.jpg",'Meu prmeiro aplicativo desenvolvido. Aplica\xe7\xe3o feita no "App Inventor 2" para ajudar no ensino de ingl\xeas',"https://destacom.ufms.br/2018/06/29/primeira-turma-de-2018/",null)
-B.yY=new A.hz("Site Portif\xf3lio","assets/projects/portifolio.jpg","Esse site de portifolio que foi feito 100% em Flutter !","",null)
+B.yR=new A.hz("Educapi","assets/projects/educapi.webp","Aplicativo feito durante um edital da UFMS incentivando a sustentabilidade.","https://www.linkedin.com/posts/felipesbg_empresas-sustentabilidade-designers-activity-7019381738736861185-eoWz?utm_source=share&utm_medium=member_desktop",null)
+B.yS=new A.hz("Road View","assets/projects/road_view.webp","Aplicativo para monitoramento de rodovias","",null)
+B.yT=new A.hz("Contador de Pontos","assets/projects/contador.webp","Contador de pontos que aceita infinitos jogadores e layout adaptativo","https://play.google.com/store/apps/details?id=com.felipeapk.score_counter",null)
+B.yU=new A.hz("English Speaker","assets/projects/english_speaker.webp",'Meu prmeiro aplicativo desenvolvido. Aplica\xe7\xe3o feita no "App Inventor 2" para ajudar no ensino de ingl\xeas',"https://destacom.ufms.br/2018/06/29/primeira-turma-de-2018/",null)
+B.yV=new A.hz("Vakinha Burguer","assets/projects/vakinha_burguer.webp","Aplicativo de delivery desenvolvido durante o DartWeek da Academia do Flutter","https://www.linkedin.com/posts/felipesbg_dartweek-flutterdevelopment-aprendizadocontinuo-activity-7028908740993032192-1L8Q?utm_source=share&utm_medium=member_desktop",null)
+B.yW=new A.hz("Site Portif\xf3lio","assets/projects/portifolio.webp","Esse site de portifolio que foi feito 100% em Flutter !","",null)
+B.yX=new A.hz("App Sigo","assets/projects/sigo.webp","Aplicativo para facilitar o acesso ao cat\xe1logo de produtos e calculadoras que automaztizam processos","https://play.google.com/store/apps/details?id=com.sigo.appsigo",null)
+B.yY=new A.hz("To Do List","assets/projects/todo_list.webp","Aplicativo que marca afazeres a serem feitos e concluidos","",null)
 B.yZ=new A.ph(0,"timed")
 B.ml=new A.ph(1,"manual")
 B.z_=new A.ph(2,"controller")
@@ -76117,7 +76117,7 @@ $.ajW=A.aP(t.N)
 $.aoW=null
 $.afM=null
 $.XD=null
-$.avx=A.a([B.yS,B.yR,B.yU,B.yT,B.yX,B.yY,B.yW,B.yV],t.p)
+$.avx=A.a([B.yV,B.yS,B.yR,B.yY,B.yU,B.yW,B.yT,B.yX],t.p)
 $.S7=!1
 $.aq8=!1
 $.ajX=null

@@ -78,7 +78,7 @@ class _AboutSectionState extends State<AboutSection>
                     child: Container(
                       decoration: BoxDecoration(
                         image: const DecorationImage(
-                          image: AssetImage("assets/profile_image.png"),
+                          image: AssetImage("assets/profile_image.webp"),
                           fit: BoxFit.fitHeight,
                         ),
                         border: Border.all(width: 2, color: AppColors.secColor),
@@ -167,7 +167,7 @@ class _AboutSectionState extends State<AboutSection>
                     child: Container(
                       decoration: BoxDecoration(
                         image: const DecorationImage(
-                          image: AssetImage("assets/profile_image.png"),
+                          image: AssetImage("assets/profile_image.webp"),
                           fit: BoxFit.fitHeight,
                         ),
                         border: Border.all(width: 2, color: AppColors.secColor),
