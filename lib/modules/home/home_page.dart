@@ -6,6 +6,9 @@ import 'package:portfolio/modules/home/sections/experiences_section.dart';
 import 'package:portfolio/modules/home/sections/home_section.dart';
 import 'package:portfolio/modules/home/sections/projects_section.dart';
 import 'package:portfolio/modules/home/widgets/menu_bar.dart';
+import 'package:portfolio/modules/home/widgets/mobile_menu_bar.dart';
+import 'package:portfolio/modules/home/widgets/section_button.dart';
+import 'package:portfolio/responsive/responsive_layout.dart';
 import 'package:portfolio/ui/colors/app_colors.dart';
 
 class HomePage extends StatefulWidget {
@@ -31,42 +34,128 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.primaryColor,
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(100),
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: MenuBar(
-            onMenuClick: _onMenuClick,
+    return ResponsiveLayout(
+        mobileBody: Scaffold(
+          endDrawer: Drawer(
+            backgroundColor: AppColors.primaryColor,
+            child: Padding(
+              padding: const EdgeInsets.only(right: 100),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  SectionButton(
+                    onPressed: () => _onMenuClick(1),
+                    text: 'Home',
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  SectionButton(
+                    onPressed: () => _onMenuClick(2),
+                    text: 'Sobre',
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  SectionButton(
+                    onPressed: () => _onMenuClick(3),
+                    text: 'Projetos',
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  SectionButton(
+                    onPressed: () => _onMenuClick(4),
+                    text: 'Experiências',
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                  SectionButton(
+                    onPressed: () => _onMenuClick(5),
+                    text: 'Contato',
+                  ),
+                  const SizedBox(
+                    height: 50,
+                  ),
+                ],
+              ),
+            ),
+          ),
+          backgroundColor: AppColors.primaryColor,
+          appBar: PreferredSize(
+            preferredSize: const Size.fromHeight(100),
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: MobileMenuBar(
+                onMenuClick: _onMenuClick,
+              ),
+            ),
+          ),
+          body: SingleChildScrollView(
+            controller: scrollController,
+            child: Column(
+              children: [
+                HomeSection(
+                  key: keyHome,
+                  onMenuClick: _onMenuClick,
+                ),
+                AboutSection(
+                  key: keyAbout,
+                ),
+                ProjectsSection(
+                  key: keyProjects,
+                ),
+                ExperiencesSection(
+                  key: keyExperiences,
+                ),
+                ContactSection(
+                  key: keyContact,
+                ),
+                const CopyRightSection()
+              ],
+            ),
           ),
         ),
-      ),
-      body: SingleChildScrollView(
-        controller: scrollController,
-        child: Column(
-          children: [
-            HomeSection(
-              key: keyHome,
-              onMenuClick: _onMenuClick,
+        desktopBody: Scaffold(
+          backgroundColor: AppColors.primaryColor,
+          appBar: PreferredSize(
+            preferredSize: const Size.fromHeight(100),
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: MenuBar(
+                onMenuClick: _onMenuClick,
+              ),
             ),
-            AboutSection(
-              key: keyAbout,
+          ),
+          body: SingleChildScrollView(
+            controller: scrollController,
+            child: Column(
+              children: [
+                HomeSection(
+                  key: keyHome,
+                  onMenuClick: _onMenuClick,
+                ),
+                AboutSection(
+                  key: keyAbout,
+                ),
+                ProjectsSection(
+                  key: keyProjects,
+                ),
+                ExperiencesSection(
+                  key: keyExperiences,
+                ),
+                ContactSection(
+                  key: keyContact,
+                ),
+                const CopyRightSection()
+              ],
             ),
-            ProjectsSection(
-              key: keyProjects,
-            ),
-            ExperiencesSection(
-              key: keyExperiences,
-            ),
-            ContactSection(
-              key: keyContact,
-            ),
-            CopyRightSection()
-          ],
-        ),
-      ),
-    );
+          ),
+        ));
   }
 
   void _onMenuClick(int value) {

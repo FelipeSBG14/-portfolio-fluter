@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/ui/portfolio_ui_config.dart';
 
+import 'core/env/env.dart';
 import 'modules/home/home_page.dart';
 
-void main() {
+void main() async {
+  await Env.i.load();
   runApp(const MyApp());
 }
 
