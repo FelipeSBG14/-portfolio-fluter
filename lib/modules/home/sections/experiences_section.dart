@@ -18,6 +18,7 @@ class ExperiencesSection extends StatelessWidget {
         width: MediaQuery.of(context).size.width * 1,
         height: MediaQuery.of(context).size.height * .9,
         child: SingleChildScrollView(
+          physics: const RangeMaintainingScrollPhysics(),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
