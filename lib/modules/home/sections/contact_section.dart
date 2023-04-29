@@ -113,11 +113,35 @@ class _ContactSectionState extends State<ContactSection> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      InformationsFormField(
-                        controller: fullNameEC,
-                        label: 'Nome Completo',
-                        validator: Validatorless.required(
-                            'Você precisa informar o seu nome'),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        child: TextFormField(
+                          validator: Validatorless.required(
+                              'Você precisa informar o seu nome'),
+                          controller: fullNameEC,
+                          decoration: InputDecoration(
+                            label: const Text(
+                              'Nome Completo',
+                              style: TextStyle(color: AppColors.secColor),
+                            ),
+                            border: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: AppColors.secColor, width: 3),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: const BorderSide(
+                                  color: AppColors.secColor, width: 3),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: const BorderSide(
+                                  color: AppColors.secColor, width: 3),
+                            ),
+                          ),
+                          style: const TextStyle(color: AppColors.secColor),
+                        ),
                       ),
                       const SizedBox(
                         width: 40,
@@ -132,8 +156,6 @@ class _ContactSectionState extends State<ContactSection> {
                           ]),
                           controller: emailAddressEC,
                           decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.symmetric(
-                                vertical: 25.0, horizontal: 10.0),
                             label: const Text(
                               'Informe o seu E-mail',
                               style: TextStyle(color: AppColors.secColor),
@@ -160,6 +182,9 @@ class _ContactSectionState extends State<ContactSection> {
                     ],
                   ),
                 ),
+                const SizedBox(
+                  height: 10,
+                ),
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.07,
                   width: MediaQuery.of(context).size.width * 1,
@@ -175,9 +200,8 @@ class _ContactSectionState extends State<ContactSection> {
                             Validatorless.number('Isso não é um número'),
                           ]),
                           controller: numberEC,
+                          maxLines: 1,
                           decoration: InputDecoration(
-                            contentPadding: const EdgeInsets.symmetric(
-                                vertical: 25.0, horizontal: 10.0),
                             label: const Text(
                               'Informe o seu telefone',
                               style: TextStyle(color: AppColors.secColor),
@@ -204,11 +228,35 @@ class _ContactSectionState extends State<ContactSection> {
                       const SizedBox(
                         width: 40,
                       ),
-                      InformationsFormField(
-                        controller: subjectEC,
-                        label: 'Assunto',
-                        validator: Validatorless.required(
-                            'Informe o assunto da conversa'),
+                      SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        child: TextFormField(
+                          validator: Validatorless.required(
+                              'Informe o assunto da conversa'),
+                          controller: subjectEC,
+                          decoration: InputDecoration(
+                            label: const Text(
+                              'Assunto',
+                              style: TextStyle(color: AppColors.secColor),
+                            ),
+                            border: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: AppColors.secColor, width: 3),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: const BorderSide(
+                                  color: AppColors.secColor, width: 3),
+                            ),
+                            focusedBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(10),
+                              borderSide: const BorderSide(
+                                  color: AppColors.secColor, width: 3),
+                            ),
+                          ),
+                          style: const TextStyle(color: AppColors.secColor),
+                        ),
                       ),
                     ],
                   ),
@@ -229,10 +277,37 @@ class _ContactSectionState extends State<ContactSection> {
                   height: MediaQuery.of(context).size.height * 0.080,
                   width: MediaQuery.of(context).size.width * 0.7,
                   child: ElevatedButton(
-                      onPressed: () {
+                      onPressed: () async {
                         final valid = formKey.currentState?.validate() ?? false;
                         if (valid) {
-                          submit(context);
+                          setState(() => isLoading = true);
+                          await sendEmail(
+                            fullNameEC.text,
+                            emailAddressEC.text,
+                            subjectEC.text,
+                            messageEC.text,
+                            numberEC.text,
+                          ).onError((error, stackTrace) {
+                            showTopSnackBar(
+                              Overlay.of(context)!,
+                              CustomSnackBar.error(
+                                message: error.toString(),
+                              ),
+                            );
+                            setState(() => isLoading = false);
+                          });
+                          setState(() => isLoading = false);
+                          showTopSnackBar(
+                            Overlay.of(context)!,
+                            const CustomSnackBar.success(
+                              message: 'Email enviado !',
+                            ),
+                          );
+                          fullNameEC.clear();
+                          emailAddressEC.clear();
+                          numberEC.clear();
+                          subjectEC.clear();
+                          messageEC.clear();
                         }
                       },
                       child: isLoading
