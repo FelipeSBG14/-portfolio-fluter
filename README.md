@@ -1,16 +1,28 @@
-# portfolio
 
-A new Flutter project.
+# Portifólio feito em Flutter Web
 
-## Getting Started
+Esse é um site portifólio responsivo feito inteiramente em Flutter Web. Nele é possível encontrar meus projetos, minhas experiências, redes sociais e como entrar em contato comigo !
 
-This project is a starting point for a Flutter application.
+[Clique aqui para acessar o site](https://portfolio-fluter-2auw.vercel.app/#/)
+## Autores
 
-A few resources to get you started if this is your first Flutter project:
+- [@felipesbg](https://github.com/FelipeSBG14/-portfolio-fluter)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Demonstração
+
+
+
+- [Clique aqui para ver um vídeo de demonstração do site !](https://www.linkedin.com/posts/felipesbg_flutter-flutterweb-portifolio-activity-7057551791541911552-TClX?utm_source=share&utm_medium=member_desktop)
+## Screenshots
+
+![Tela Inicial](https://i.imgur.com/Xtt02Bl.jpg)
+
+![Sobre Mim](https://i.imgur.com/NqYui75.jpg)
+
+![Projetos](https://i.imgur.com/aaiEU8C.jpg)
+
+![Trajetória](https://i.imgur.com/cTXRtsD.jpg)
+
+![Contato](https://i.imgur.com/Jc7HHwq.jpg)
+
